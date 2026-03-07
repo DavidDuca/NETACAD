@@ -1,0 +1,126 @@
+:root {
+    --cisco-green: #6abf4b;
+    --cisco-dark-green: #487b32;
+    --border-gray: #ebebeb;
+    --text-muted: #666;
+    --text-dark: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body { background-color: #fafafa; overflow-x: hidden; }
+
+/* --- HEADER & HOVER EFFECT (Image 3) --- */
+.mastHead {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 70px; padding: 0 2%; background: #fff; border-bottom: 1px solid var(--border-gray);
+    position: sticky; top: 0; z-index: 1000;
+}
+.header-left, .header-right { display: flex; align-items: center; }
+.logo { height: 32px; cursor: pointer; }
+
+.explore-btn {
+    border: 1px solid var(--text-dark); background: #fff; padding: 6px 12px; border-radius: 4px;
+    margin: 0 20px; cursor: pointer; font-weight: bold; font-size: 14px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    align-items: flex-start; /* align text to the left */
+}
+
+
+.search-bar {
+    background: #fafafa; border: 1px solid #ddd; border-radius: 4px;
+    padding: 6px 18px; width: 380px; display: flex; align-items: center;
+}
+.search-bar input { border: none; background: transparent; outline: none; margin-left: 10px; width: 100%; font-size: 14px; }
+
+/* Thick Green Underline Hover (Image 3) */
+.my-learning-link {
+    text-decoration: none; color: var(--text-muted); font-weight: 700;
+    font-size: 16px; height: 70px; display: flex; align-items: center;
+    padding: 0 10px; border-bottom: 5px solid transparent; transition: 0.2s;
+    margin-right: 10px;
+}
+.my-learning-link:hover { 
+    border-bottom: 5px solid var(--cisco-dark-green);  
+    color: var(--cisco-dark-green); }
+
+.nav-icons { display: flex; gap: 20px; padding: 0 20px; color: #555; cursor: pointer; border-left: 1px solid #eee; }
+
+/* Profile Nav Silhouette (Image 2) */
+.user-profile-nav { display: flex; align-items: center; gap: 8px; padding-left: 10px; }
+.silhouette-circle {
+    border-radius: 50%; border: 1px solid #999; display: flex; 
+    align-items: center; justify-content: center; color: #777; background: #fff;
+}
+.nav-small { width: 30px; height: 30px; font-size: 14px; }
+
+.nav-user-name { font-weight: bold; font-size: 14px; color: var(--text-dark); }
+.nav-user-role { font-size: 11px; color: #005691; }
+
+/* --- MAIN LAYOUT --- */
+.breadcrumb { padding: 15px 2%; color: black; font-size: 13px; }
+.fa-chevron-right{
+    color: var(--text-muted);
+}
+.main-layout { display: flex; padding: 0; gap: 25px; max-width: 1600px; margin: 0 auto; }
+
+/* Certificate Preview (No Scrollbars) */
+.cert-column {  flex: 1.8;
+    background: #333;
+    height: 600px;
+    border-radius: 0px;
+    display: flex;
+    align-items: flex-start; /* align items to top */
+    justify-content: center; /* keep horizontal centering */
+    overflow: hidden;
+    padding-top: 2px; /* just in case */}
+.cert-frame { width: 90%; height: 90%; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.flat-cert-img { width: 100%; height: 100%; object-fit: contain; }
+
+/* Spacious Sidebar (Image 1) */
+.sidebar-column {
+    flex: 1.2; background: #fff; border: 1px solid var(--border-gray);
+    border-radius: 4px; display: flex; flex-direction: column; padding: 25px;
+    min-width: 700px; /* Prevents text from being tight */
+}
+
+.issuance-row { display: flex; align-items: center; width: 100%; margin-bottom: 10px; gap: 20px;}
+.issuance-item { flex: 2; padding: 0 15px; display: flex; align-items: center; gap: 12px; }
+.user-info { flex: 5; padding-left: 0; }
+.border-left { border-left: 1px solid #ddd; height: 45px; }
+
+.sidebar-large { width: 48px; height: 48px; font-size: 22px; color: #58666e; border-color: #58666e; }
+
+.info-label { font-size: 12px; color: var(--text-muted); margin-bottom: 3px; display: block; }
+.info-value { font-weight: 700; font-size: 15px; color: #000; display: block; }
+
+.section-divider { border: 0; border-top: 1px solid #eee; margin: 15px 0 25px 0; }
+
+.section-title { font-size: 13px; color: #888; letter-spacing: 1px; margin-bottom: 12px; }
+.course-title-bold { font-weight: 700; font-size: 16px; margin-bottom: 8px; }
+.course-desc { font-size: 14px; color: #444; line-height: 1.6; margin-bottom: 30px; }
+.skill-pill { background: #eef3f7; padding: 6px 15px; border-radius: 20px; font-size: 13px; color: #444; }
+
+/* Download Button Alignment (Image 5) */
+.download-footer { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-gray); display: flex; justify-content: flex-end; }
+.download-btn {
+    background-color: #579f4e; color: white; border: none; border-radius: 30px; 
+    font-weight: 700; font-size: 16px; padding: 12px 30px; cursor: pointer; 
+    display: flex; align-items: center; gap: 10px; transition: 0.3s;
+}
+.download-btn:hover { background-color: #8bcd7b; }
+
+/* --- REALISTIC FOOTER --- */
+.cisco-footer { background: #333; color: white; padding: 60px 8% 30px 8%; margin-top: 200px; }
+.footer-top { display: flex; justify-content: space-between; border-bottom: 1px solid #555; padding-bottom: 40px; }
+.footer-links { display: flex; gap: 80px; }
+.f-group h6 { margin-bottom: 20px; color: #bbb; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
+.f-group a { display: block; color: #ddd; text-decoration: none; font-size: 14px; margin-bottom: 10px; transition: 0.2s; }
+.f-group a:hover { color: #fff; text-decoration: underline; }
+.f-social { display: flex; gap: 20px; font-size: 22px; color: #fff; }
+.footer-bottom { padding-top: 25px; display: flex; justify-content: space-between; font-size: 12px; opacity: 0.6; }
+.f-legal a { color: white; text-decoration: none; margin-left: 20px; }

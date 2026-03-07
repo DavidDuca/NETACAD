@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Networking Academy | Certificate Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="mastHead">
+        <div class="header-left">
+            <img src="https://www.netacad.com/sfa-assets/images/svg/netacad_logo_black.svg" class="logo" alt="Cisco">
+            <button class="explore-btn"><i class="fas fa-th"></i> Explore <i class="fas fa-chevron-down"></i></button>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for courses, articles and resources">
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a href="#" class="my-learning-link">My Learning</a>
+            <div class="nav-icons">
+                <span><i class="fas fa-globe"></i> EN</span>
+                <i class="far fa-question-circle"></i>
+                <i class="far fa-bell icon-bell"></i>
+            </div>
+            <div class="user-profile-nav">
+                <div class="silhouette-circle nav-small">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-text">
+                    <span class="nav-user-name">David R...</span>
+                    <span class="nav-user-role">Learner</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <span>Profile</span> <i class="fas fa-chevron-right"></i> <span>Badges & Certificates <i class="fas fa-chevron-right"></i></span>
+    </nav>
+
+    <main class="main-layout">
+        <!-- LEFT: CLEAN CERTIFICATE PREVIEW (No Scrollbars) -->
+        <section class="cert-column">
+            <div class="cert-frame">
+                <!-- Point this to an image/screenshot of your certificate for a clean look -->
+                <img src="certificate.png" alt="Certificate Preview" class="flat-cert-img">
+            </div>
+        </section>
+
+        <!-- RIGHT: SPACIOUS SIDEBAR -->
+        <aside class="sidebar-column">
+            
+            <!-- Issuance Info Row (Image 1 alignment) -->
+            <div class="issuance-row">
+                <div class="issuance-item user-info">
+                    <div class="silhouette-circle sidebar-large">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="text-group">
+                        <span class="info-label">Completed by</span>
+                        <span class="info-value">David Rupert Duca</span>
+                    </div>
+                </div>
+
+                <div class="issuance-item border-left">
+                    <div class="text-group">
+                        <span class="info-label">Issue Date</span>
+                        <span class="info-value">Feb 26, 2026</span>
+                    </div>
+                </div>
+
+                <div class="issuance-item border-left">
+                    <div class="text-group">
+                        <span class="info-label">Total Hours</span>
+                        <span class="info-value">22</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Course Details -->
+            <div class="course-meta">
+                <p class="section-title">ABOUT COURSE</p>
+                <p class="course-title-bold">Networking Basics</p>
+                <p class="course-desc">Start learning the basics of computer networking and discover how networks operate.</p>
+
+                <p class="section-title">SKILLS</p>
+                <span class="skill-pill">Networking Basics</span>
+            </div>
+
+            <!-- Bottom Download Area -->
+            <div class="download-footer">
+                <a href="certificate.pdf" download="David_Duca_Cisco.pdf" style="text-decoration: none;">
+                    <button class="download-btn">
+                        Download <i class="fas fa-download"></i>
+                    </button>
+                </a>
+            </div>
+        </aside>
+    </main>
+
+    <!-- REALISTIC FOOTER -->
+    <footer class="cisco-footer">
+        <div class="footer-top">
+            <div class="footer-logo-side">
+                <img src="https://www.netacad.com/sfa-assets/images/svg/netacad_logo_footer.svg" alt="Cisco" width="160">
+            </div>
+            <div class="footer-links">
+                <div class="f-group">
+                    <h6>Learning Catalog</h6>
+                    <a href="#">Learning Catalog</a>
+                    <a href="#">Find an Academy</a>
+                </div>
+                <div class="f-group">
+                    <h6>Resources</h6>
+                    <a href="#">Support</a>
+                    <a href="#">Teach with us</a>
+                </div>
+                <div class="f-social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Cisco. All rights reserved.</p>
+            <div class="f-legal">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Statement</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
