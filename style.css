@@ -24,6 +24,11 @@ body { background-color: #fafafa; overflow-x: hidden; }
     margin: 0 20px; cursor: pointer; font-weight: bold; font-size: 14px;
 }
 
+.explore-btn:hover{
+    border: 1px solid var(--cisco-green); background: #fff; padding: 6px 12px; border-radius: 4px;
+    color: var(--cisco-dark-green);
+}
+
 .user-text {
     display: flex;
     flex-direction: column; /* stack children vertically */
@@ -115,7 +120,7 @@ body { background-color: #fafafa; overflow-x: hidden; }
 .download-btn:hover { background-color: #8bcd7b; }
 
 /* --- REALISTIC FOOTER --- */
-.cisco-footer { background: #333; color: white; padding: 60px 8% 30px 8%; margin-top: 200px; }
+.cisco-footer { background: #333; color: white; padding: 60px 8% 30px 8%; margin-top: 240px; }
 .footer-top { display: flex; justify-content: space-between; border-bottom: 1px solid #555; padding-bottom: 40px; }
 .footer-links { display: flex; gap: 80px; }
 .f-group h6 { margin-bottom: 20px; color: #bbb; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
@@ -124,3 +129,139 @@ body { background-color: #fafafa; overflow-x: hidden; }
 .f-social { display: flex; gap: 20px; font-size: 22px; color: #fff; }
 .footer-bottom { padding-top: 25px; display: flex; justify-content: space-between; font-size: 12px; opacity: 0.6; }
 .f-legal a { color: white; text-decoration: none; margin-left: 20px; }
+
+/* --- DESKTOP REFINEMENT --- */
+/* This ensures the sidebar doesn't overflow on smaller desktop screens (1024px-1366px) */
+@media (max-width: 1400px) {
+    .sidebar-column {
+        min-width: 500px;
+    }
+}
+
+/* --- TABLET BREAKPOINT (768px to 1024px) --- */
+@media (max-width: 1024px) {
+    .main-layout {
+        flex-direction: column; /* Stack cert on top of sidebar */
+        padding: 0 4% 40px 4%;
+    }
+
+    .cert-column, .sidebar-column {
+        flex: none;
+        width: 100%;
+        min-width: 0; /* Remove the hardcoded 700px */
+    }
+
+    .search-bar {
+        width: 250px; /* Shrink search bar on tablets */
+    }
+
+    .cisco-footer {
+        margin-top: 50px;
+    }
+}
+
+/* --- MOBILE BREAKPOINT (Below 768px) --- */
+@media (max-width: 767px) {
+    /* Header Adjustments */
+    .mastHead {
+        height: auto;
+        padding: 10px 4%;
+        flex-wrap: wrap; /* Allow navbar to wrap if needed */
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        display: none; /* Hide search bar on mobile to save space, common in clones */
+    }
+
+    .logo {
+        height: 25px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid var(--border-gray);
+        padding-top: 10px;
+    }
+
+    .my-learning-link {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .nav-icons {
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .user-text {
+        display: none; /* Hide name text on small mobile, keep avatar */
+    }
+
+    /* Layout Adjustments */
+    .cert-column {
+        height: 260px; /* Reduce height on mobile */
+    }
+
+    /* Sidebar Info Stacking */
+    .issuance-row {
+        flex-direction: column; /* Stack "Completed by", "Issue Date", etc */
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .issuance-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .border-left {
+        border-left: none;
+        border-top: 1px solid #eee; /* Change vertical divider to horizontal */
+        padding-top: 15px;
+        height: auto;
+    }
+
+    .download-btn {
+        width: 100%; /* Full width button on mobile for better thumb reach */
+    }
+
+    /* Footer Stacking */
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .f-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .f-legal {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .f-legal a {
+        margin: 0 10px;
+    }
+}
