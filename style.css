@@ -267,8 +267,6 @@ a i.fas.fa-search {
         padding-top: 15px;
         height: auto;
     }
-    .download-footer {
-        margin-top: 30px;
 
     .download-btn {
         width: 100%; /* Full width button on mobile for better thumb reach */
@@ -307,6 +305,3 @@ a i.fas.fa-search {
         margin: 0 10px;
     }
 }
-
-
-
