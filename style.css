@@ -35,6 +35,21 @@ body { background-color: #fafafa; overflow-x: hidden; }
     align-items: flex-start; /* align text to the left */
 }
 
+.user-profile-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icon and text */
+    text-decoration: none; /* remove underline */
+    color: inherit; /* keep original text color */
+}
+
+.user-profile-nav:hover {
+    cursor: pointer;
+    background-color: #f0f0f0; /* optional hover effect */
+    border-radius: 8px; /* optional hover effect */
+    transition: background-color 0.2s;
+}
+
 
 .search-bar {
     background: #fafafa; border: 1px solid #ddd; border-radius: 4px;
@@ -309,4 +324,5 @@ a i.fas.fa-search {
         margin: 0 10px;
     }
 }
+
 
